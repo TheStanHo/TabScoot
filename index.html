@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tab Scoot — Tab groups, set-aside, palette search · all local</title>
+    <meta
+      name="description"
+      content="Tab Scoot for Chrome: set-aside mode, saved tab groups, fuzzy command palette, recently closed, optional memory saver. No account — data stays on your device."
+    />
+    <meta property="og:title" content="Tab Scoot" />
+    <meta
+      property="og:description"
+      content="Calmer tabs in Chrome: set-aside, saved groups, palette search, optional discard — local only."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/promo/marquee-1400x560.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site">
+      <div class="inner">
+        <a class="logo" href="./">Tab Scoot</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#screenshots">Screenshots</a>
+          <a href="#privacy">Privacy</a>
+          <a href="./privacy.html">Privacy policy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap">
+        <div class="hero-inner">
+          <h1>Scoot the clutter. Keep the focus.</h1>
+          <p class="lead">
+            Tab Scoot helps you tidy Chrome with <strong>set-aside mode</strong>, <strong>saved tab groups</strong>, a
+            <strong>fuzzy search palette</strong>, <strong>recently closed</strong>, and an optional
+            <strong>memory saver</strong> — with <strong>no account</strong> and data that stays on your device.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://chromewebstore.google.com/" rel="noopener noreferrer"
+              >Get from Chrome Web Store</a
+            >
+            <a class="btn btn-secondary" href="./privacy.html">Read privacy policy</a>
+          </div>
+        </div>
+        <figure class="hero-marquee" role="presentation">
+          <img
+            src="assets/promo/marquee-1400x560.png"
+            width="1400"
+            height="560"
+            alt="Tab Scoot promotional banner: extension popup and tab management UI"
+          />
+        </figure>
+        <p style="margin-top: 1rem; text-align: center; font-size: 0.85rem; color: var(--muted); max-width: 36rem; margin-inline: auto">
+          Replace the Store button URL with your real listing when it’s live. Screenshots below are the same assets used for store listing previews.
+        </p>
+      </section>
+
+      <section class="block wrap" id="features" aria-labelledby="features-heading">
+        <h2 id="features-heading">What Tab Scoot does</h2>
+        <p class="section-intro">
+          Everything runs in Chrome: a popup for stash and groups, keyboard shortcuts for zen mode and the palette, and
+          optional background tab discard — aligned with a single tab-management purpose.
+        </p>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Set-aside (Zen)</h3>
+            <p>Keep only the active tab in this window; stash the rest to reopen when you’re ready.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Saved groups</h3>
+            <p>Name a snapshot of this window’s tabs and restore it later from the popup.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Command palette</h3>
+            <p>Fuzzy search across open tabs and saved groups. Assign shortcuts under chrome://extensions/shortcuts.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Recently closed</h3>
+            <p>Uses Chrome’s own recently closed list — restore in one click from the popup.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Optional memory saver</h3>
+            <p>When enabled, discards eligible background http/https tabs to reduce RAM (Chrome discard — click to reload).</p>
+          </article>
+          <article class="feature-card">
+            <h3>Local by design</h3>
+            <p>Stash, groups, and preferences use <code>chrome.storage.local</code> — no project-operated cloud in this product.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="block wrap" id="screenshots" aria-labelledby="shots-heading">
+        <h2 id="shots-heading">Screenshots</h2>
+        <p class="section-intro">
+          Pulled from the same <code>store-assets/chrome-web-store/screenshots</code> set used for Chrome Web Store
+          graphics — copied into this site’s <code>assets/screenshots</code> so GitHub Pages stays self-contained.
+        </p>
+        <div class="shot-grid">
+          <figure class="shot-card">
+            <img
+              src="assets/screenshots/01-popup-overview.png"
+              alt="Tab Scoot popup showing current window, set-aside, save group, and shortcuts"
+              width="1280"
+              height="800"
+              loading="lazy"
+            />
+            <figcaption>
+              <strong>Popup overview</strong>
+              <span>Current window, “Only this tab”, restore, save group, and shortcut hints.</span>
+            </figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img
+              src="assets/screenshots/02-set-aside-mode.png"
+              alt="Tab Scoot set-aside mode before and after tidying tabs"
+              width="1280"
+              height="800"
+              loading="lazy"
+            />
+            <figcaption>
+              <strong>Set-aside mode</strong>
+              <span>Keep the tab you’re focused on; stash the rest for later.</span>
+            </figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img
+              src="assets/screenshots/03-saved-groups.png"
+              alt="Tab Scoot saved tab groups list in the popup"
+              width="1280"
+              height="800"
+              loading="lazy"
+            />
+            <figcaption>
+              <strong>Saved groups</strong>
+              <span>Open or remove named groups you’ve saved from the window.</span>
+            </figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img
+              src="assets/screenshots/04-command-palette-search.png"
+              alt="Tab Scoot command palette with search results"
+              width="1280"
+              height="800"
+              loading="lazy"
+            />
+            <figcaption>
+              <strong>Command palette</strong>
+              <span>Search tabs and groups; press Enter to jump.</span>
+            </figcaption>
+          </figure>
+          <figure class="shot-card" style="grid-column: 1 / -1; max-width: 56rem; margin-inline: auto">
+            <img
+              src="assets/screenshots/05-memory-saver.png"
+              alt="Tab Scoot memory saver optional setting in the popup"
+              width="1280"
+              height="800"
+              loading="lazy"
+            />
+            <figcaption>
+              <strong>Optional memory saver</strong>
+              <span>Toggle unload of idle background tabs; interval and copy explain discard behavior.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="block wrap" id="privacy" aria-labelledby="privacy-heading">
+        <h2 id="privacy-heading">Privacy</h2>
+        <div class="privacy-teaser">
+          <p id="privacy-teaser-text">
+            Tab Scoot handles <strong>tab URLs and titles</strong> (and names you give groups) <strong>only on your
+            device</strong> to power these features. There is <strong>no</strong> sign-in and <strong>no</strong>
+            routine upload of your browsing data to servers operated by this project. The full policy covers Chrome Web
+            Store <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">User Data</a> and
+            <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">Limited Use</a> expectations.
+          </p>
+          <a class="btn btn-secondary" href="./privacy.html" style="flex-shrink: 0">Full privacy policy →</a>
+        </div>
+      </section>
+
+      <footer class="site wrap">
+        <p>
+          © <span id="y"></span> Tab Scoot ·
+          <a href="./privacy.html">Privacy policy</a>
+          ·
+          <a href="#main">Back to top</a>
+        </p>
+      </footer>
+    </main>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

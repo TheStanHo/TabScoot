@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy policy — Tab Scoot</title>
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#policy-main">Skip to content</a>
+    <header class="site">
+      <div class="inner">
+        <a class="logo" href="./">Tab Scoot</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="./#features">Features</a>
+          <a href="./#screenshots">Screenshots</a>
+          <a href="./#privacy">Privacy</a>
+          <a href="./privacy.html" aria-current="page">Privacy policy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="policy-main" class="wrap">
+      <article class="policy">
+        <h1>Tab Scoot — Privacy policy</h1>
+        <p class="meta">
+          Aligns with the Chrome Web Store
+          <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">User Data FAQ</a>
+          and
+          <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">Limited Use</a>
+          expectations. Keep this page consistent with your store listing and the extension’s behavior.
+        </p>
+
+        <h2>1. Do we handle personal or sensitive user data?</h2>
+        <p>
+          <strong>Yes, in Chrome’s sense, but only on your device and only for tab-management features.</strong>
+        </p>
+        <p>
+          Tab Scoot reads and may <strong>store locally</strong> information that Chrome classifies as sensitive in
+          broad categories—for example <strong>web browsing activity</strong> in the form of <strong>page URLs and
+          titles</strong> for tabs you interact with (open tabs, set-aside stash, saved groups). It does
+          <strong>not</strong> scrape full page body text, screenshots, or form fields from websites for upload to
+          the developer.
+        </p>
+        <p>
+          Because Tab Scoot handles such data, this policy describes <strong>collection, use, and sharing</strong> as
+          the User Data FAQ expects.
+        </p>
+
+        <h2>2. What information do we collect?</h2>
+        <p>
+          Per the User Data FAQ, we explain information the extension collects—including via permissions and
+          storage—not only what you type in a form.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Data</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>chrome.tabs</code></td>
+              <td>Tab <strong>URLs</strong>, <strong>titles</strong>, ids, window membership, discarded state</td>
+              <td>
+                Popup, set-aside, saved groups, optional discard, command palette. <strong>Not</strong> sent to
+                servers operated by this project.
+              </td>
+            </tr>
+            <tr>
+              <td><code>chrome.storage.local</code></td>
+              <td>
+                Set-aside stash and saved groups: <strong>URLs and titles</strong> (and <strong>names you choose</strong>
+                for groups), plus <strong>preferences</strong> (e.g. auto-suspend on/off, idle minutes)
+              </td>
+              <td>Persists until you delete items, restore stash, or remove the extension / clear storage.</td>
+            </tr>
+            <tr>
+              <td><code>chrome.sessions</code></td>
+              <td>Chrome’s <strong>recently closed</strong> entries (session ids, titles, urls as exposed by the API)</td>
+              <td>Shown in the popup; <strong>not</strong> copied into a separate cloud database by this project.</td>
+            </tr>
+            <tr>
+              <td>Content script (palette)</td>
+              <td>Injects UI into normal <strong>http/https</strong> pages</td>
+              <td>
+                Does <strong>not</strong> read or upload the host page’s article text, images, or media; adds extension
+                UI and talks to the extension runtime.
+              </td>
+            </tr>
+            <tr>
+              <td>Palette search</td>
+              <td>Your <strong>search string</strong> processed <strong>inside the extension</strong></td>
+              <td>
+                Includes bundled local search (e.g. fuse.js). <strong>Not</strong> sent to any server operated by this
+                project.
+              </td>
+            </tr>
+            <tr>
+              <td><code>chrome.alarms</code></td>
+              <td>Alarm name / schedule only (no tab contents)</td>
+              <td>
+                Used <strong>only when</strong> optional auto-suspend is on, to wake the service worker on a fixed
+                interval and evaluate discard. Cleared when suspend is off.
+              </td>
+            </tr>
+            <tr>
+              <td><code>activeTab</code> + <code>scripting</code></td>
+              <td>One-time script injection on the <strong>focused</strong> tab when needed</td>
+              <td>
+                Lets the command palette load on normal http/https pages after a <strong>keyboard shortcut</strong>,
+                including a fallback inject if the page has not picked up the content script yet. Same bundled palette
+                code as the manifest content script — <strong>not</strong> remote code.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          We <strong>do not</strong> collect, as part of the shipped extension: health data, payment card data,
+          passwords, your email for login (there is <strong>no</strong> account), general email/chat contents, GPS
+          location, or a separate log of every click/keystroke across the web.
+        </p>
+        <p>
+          <strong>Automatically collected data:</strong> No extension-owned analytics endpoints, telemetry beacons, or
+          remote logging servers in the shipped product. No server-side HTTP logs from this project for your browsing
+          from routine extension use.
+        </p>
+        <p>
+          <strong>Identifiers:</strong> No cloud user id from the developer. Chrome assigns an extension id and uses
+          local storage keys as part of normal browser behavior.
+        </p>
+
+        <h2>3. How do we use the information?</h2>
+        <p>We use the data <strong>only</strong> for tab and window management you trigger in the UI or via shortcuts:</p>
+        <ul>
+          <li>Set-aside (“only this tab”) and restore</li>
+          <li>Save and reopen named tab groups</li>
+          <li>Recently closed list and restore</li>
+          <li>Command palette (search / switch tabs and groups)</li>
+          <li>Optional background tab discard (memory saver) when you enable it</li>
+        </ul>
+        <p>
+          Not implemented: personalized ads, retargeting, credit scoring, selling browsing history, or routine human
+          reading of your tab list on a developer server.
+        </p>
+
+        <h2>4. What information do we share, and with whom?</h2>
+        <p>
+          <strong>We do not sell, rent, or trade your data.</strong> We do not transfer URLs/titles/stash contents to
+          <strong>servers operated by this project</strong>—this build has <strong>no</strong> project-operated backend
+          for extension data.
+        </p>
+        <p><strong>Third parties:</strong></p>
+        <ul>
+          <li>
+            <strong>Google / Chrome:</strong> The store and browser are governed by Google’s policies. See
+            <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+          </li>
+          <li>
+            <strong>Websites you visit:</strong> Normal web requests are between you and the site, not an upload to the
+            Tab Scoot developer.
+          </li>
+        </ul>
+        <p>
+          Transfers for mergers, security, or legal process would only apply if a future publisher policy says so.
+        </p>
+
+        <h2>5. Security (handling requirements)</h2>
+        <p>
+          Sensitive data (tab URLs/titles, stash, groups) stays in <strong>Chrome local extension storage</strong> and
+          extension contexts. It is <strong>not</strong> transmitted to the developer’s servers by the extension in
+          this product design.
+        </p>
+        <p>
+          HTTPS between you and websites is unchanged. Use a current Chrome version, lock your device, and review
+          <code>chrome://extensions</code> on shared computers.
+        </p>
+
+        <h2>6. Retention and your control</h2>
+        <ul>
+          <li>
+            <strong>Saved groups and stash:</strong> Until you delete them, restore the stash, or uninstall / clear
+            extension data.
+          </li>
+          <li><strong>Preferences:</strong> Until you change them or clear storage.</li>
+          <li>
+            <strong>Recently closed:</strong> From Chrome’s session data; retention follows Chrome’s rules.
+          </li>
+        </ul>
+        <p>
+          <strong>Access / erasure:</strong> Use the popup; advanced users may inspect extension storage in developer
+          tools. Uninstalling removes extension storage for that profile (subject to Chrome behavior).
+        </p>
+
+        <h2>7. Limited use of user data (Chrome Web Store)</h2>
+        <ol>
+          <li>
+            <strong>Allowed use</strong> — Data from permissions is used only to provide the extension’s
+            <strong>single purpose</strong>: helping you manage tabs and saved groups (including optional discard).
+          </li>
+          <li>
+            <strong>Allowed transfer</strong> — No routine transfer to the developer’s servers for unrelated purposes
+            in this build.
+          </li>
+          <li>
+            <strong>Prohibited advertising</strong> — We do not use or transfer user data for personalized,
+            re-targeted, or interest-based advertising.
+          </li>
+          <li>
+            <strong>Prohibited human interaction</strong> — We do not allow humans to read your tab data for routine
+            operations.
+          </li>
+        </ol>
+        <p>
+          See:
+          <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">Limited Use policy</a>.
+        </p>
+
+        <h2>8. Prominent disclosure and consent (when it applies)</h2>
+        <p>
+          Some sensitive uses require in-product disclosure before collection. For Tab Scoot, tab URLs/titles for
+          stash, groups, and the palette are <strong>closely related</strong> to the described tab-management purpose
+          and UI. This policy supplements the store listing and in-extension descriptions.
+        </p>
+
+        <h2>9. GDPR (EU) — plain-language note</h2>
+        <p>Informational only, not legal advice.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>How it applies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Personal data</td>
+              <td>URLs and titles can reveal interests or identity (especially query strings). Group names are free text you enter.</td>
+            </tr>
+            <tr>
+              <td>Processing</td>
+              <td>Local in Chrome: storage, service worker, popup, palette UI.</td>
+            </tr>
+            <tr>
+              <td>Lawful basis</td>
+              <td>Typically your choice to install and use the product; organizations should confirm with counsel.</td>
+            </tr>
+            <tr>
+              <td>International transfers</td>
+              <td>None to project servers in this build.</td>
+            </tr>
+            <tr>
+              <td>Security</td>
+              <td>Restored tabs use http/https where enforced; other schemes skipped when saving/restoring.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>10. Changes</h2>
+        <p>
+          If Tab Scoot gains analytics, cloud sync, accounts, or remote code, update this page, the Chrome Web Store
+          disclosures, and the extension so they stay consistent.
+        </p>
+        <p class="meta">Revise the policy text when you publish meaningful product or data-practice changes.</p>
+      </article>
+
+      <footer class="site wrap">
+        <p>
+          <a href="./">← Home</a>
+          · Tab Scoot · © <span id="y"></span>
+        </p>
+      </footer>
+    </main>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
