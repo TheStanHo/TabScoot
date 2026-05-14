@@ -26,7 +26,7 @@ Then commit and push the **tabscoot-site** repo.
 
 ## Before you publish
 
-- **`index.html`**: Replace the placeholder **Chrome Web Store** button URL with your real listing.
+- **`index.html`**: Keep the **Chrome Web Store** button URL aligned with the published listing.
 - **`privacy.html`**: Keep text aligned with **`PRIVACY.md`** in the extension repo and with the **Privacy practices** tab in the developer dashboard (they must match behavior).
 - **Open Graph**: `og:image` is a relative path (`assets/promo/...`). For best social previews after deploy, you may switch it to the **full HTTPS URL** of that image on your live site.
 
